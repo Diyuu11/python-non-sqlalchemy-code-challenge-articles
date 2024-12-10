@@ -102,8 +102,8 @@ class TestMagazine:
         assert magazine_1.category != ""
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     magazine_1.category = ""
+        with pytest.raises(Exception):
+            magazine_1.category = ""
 
     def test_has_many_articles(self):
         """magazine has many articles"""

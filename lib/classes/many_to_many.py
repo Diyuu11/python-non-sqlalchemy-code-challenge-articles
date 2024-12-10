@@ -13,6 +13,10 @@ class Article:
         author._articles.append(self)
         magazine._articles.append(self)
 
+        def name():
+            return self.name
+
+
 class Author:
     def __init__(self, name):
         if not isinstance(name, str) or len(name) == 0:
@@ -77,3 +81,6 @@ class Magazine:
             author_count[article.author] = author_count.get(article.author, 0) + 1
         contributing_authors = [author for author, count in author_count.items() if count > 2]
         return contributing_authors if contributing_authors else None
+
+    author_1=Author("hamdi")
+    print(author_1.name)
